@@ -1,0 +1,499 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family:Arial, Helvetica, sans-serif;
+}
+:root{
+    --bg-color: #1f242d;
+    --text-color: #fff;
+    --second-bg-color: #323846;
+    --main-color: rgb(0, 221, 255);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    top: 0;;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;  
+}
+.logo{
+    font-size: 2.5rem;
+    color: white;
+    cursor: default;
+    font-weight: 600;
+    margin-left: -5rem;
+}
+.nav a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 2.5rem;
+    transition: .3s;
+    font-weight: 600;
+}
+.nav a:hover,
+.nav a.active{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 2rem;
+    color: var(--text-color);
+    display: none;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15rem;
+    margin-left: 10rem;
+    animation: scale;
+    animation-timing-function: linear;
+    animation-duration: .5s;
+}
+.home img{
+    width: 70rem;
+    padding: 10px;
+    margin-right: 10rem;
+}
+.home-contant h1{
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-left: 10rem;
+}
+.home-contant h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-left: 10rem;
+}
+.home-contant p{
+    font-size: 1.6rem;
+    line-height: 2.3;
+    margin-left: 10rem;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    border: .2rem solid var(--main-color);
+    background: transparent;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.social-media a:hover{
+    scale: 1.2;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.btn{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 20px;
+    border: .2rem solid var(--main-color);
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    background: var(--main-color);
+    margin-left: 10rem;
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 2rem var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+
+}
+span{
+    color: var(--main-color);
+}
+#heading{
+    padding: 20px;
+    animation: scale linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem ;
+}
+.about-contant h1{
+    font-size: 4rem;
+    line-height: 6rem;
+    text-align: center;
+}
+.about-contant a{
+    color: white;
+    border: .2rem solid var(--main-color);
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 17px;
+}
+.about-contant p:hover{
+    box-shadow: 0 0 2rem var(--main-color);
+}
+.about-contant a:hover{
+    box-shadow: 0 0 2rem var(--main-color);
+    background: var(--main-color);
+    color: black;
+}
+.about-contant p{
+    background: var(--second-bg-color);
+    border-radius: 20px;
+    font-size: 25px;
+    margin: 20px;
+    margin-right: 100px;
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.edu-heading, .abt-heading{
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 40px;
+}
+.education .line{
+    height: 60rem;
+    width: 2px;
+    background: white;
+    margin-top: -5rem;
+    margin-right: 15rem;
+}
+.education{
+    display: flex;
+    margin: 10rem;
+    justify-content: space-between;
+}
+.edu-contant-1{
+    line-height: 30px;
+    height: 135px;
+    font-size: 16px;
+    padding: 10px;
+    background: var(--second-bg-color);
+    border-radius: 20px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.edu-contant-2{
+    line-height: 30px;
+    height: 135px;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 15rem;
+    margin-left: -15rem;
+    background: var(--second-bg-color);
+    border-radius: 20px;
+    animation: rev linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.edu-contant-3{
+    line-height: 30px;
+    height: 135px;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: -30rem;
+    background: var(--second-bg-color);
+    border-radius: 20px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.edu-contant-1:hover, .edu-contant-2:hover, .edu-contant-3:hover{
+    box-shadow: 0 0 2rem var(--main-color);
+}
+.intern{
+    margin-top: -10rem;
+    display: block;
+    margin-bottom: 20rem;
+    line-height: 2;
+    font-family: 'Times New Roman', Times, serif;
+}
+.intern-heading{
+    justify-content: center;
+    text-align: center;
+    font-size: 5rem;
+}
+.intern-details{
+    background: var(--second-bg-color);
+    margin: 10rem;
+    margin-top: -2rem;
+    border-radius: 20px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.intern-details h2{
+    font-size: 4rem;
+    margin-top: 3rem;
+    margin-left: 10rem;
+}
+.intern-details h3{
+    font-size: 3rem;
+    margin-left: 10rem;
+}
+.intern-details p{
+    font-size: 2rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.skill-heading{
+    font-size: 4rem;
+    text-align: center;
+    margin-top: -10rem;
+    margin-bottom: 5rem;
+}
+.skill-contant{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-right: 80px;
+    margin-left: 80px;
+    font-size: 2rem;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.skill-contant-1, .skill-contant-2{
+    background: var(--second-bg-color);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.skill-contant-2 i{
+    font-size: 3rem;
+    padding: 20px;
+    width: 100px;
+    border: .2rem solid var(--main-color);
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.skill-contant span{
+    font-weight: bold;
+}
+.skill-contant-1 i{
+    font-size: 3rem;
+    padding: 20px;
+    width: 100px;
+    border: .2rem solid var(--main-color);
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 2.5rem;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.skill-contant i span{
+    font-size: 13px;
+}
+.skill-contant-1 i:hover, .skill-contant-2 i:hover, .skill-contant-1 .ps-icon:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+    scale: 1.1;
+}
+
+.skill-contant-1 .ps-icon{
+    margin-left: 2rem;
+    padding: 20px;
+    border-radius: 20px;
+    border: .2rem solid var(--main-color);
+    width: 100px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.ps-icon img{
+    width: 30px;
+    margin-left: .3rem;
+    border-radius: 5px
+}
+.project-heading{
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5rem;
+}
+.project-contant{
+    display: flex;
+    margin-right: 80px;
+    margin-left: 80px;
+    font-size: 2rem;
+    background: var(--second-bg-color);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.project-contant-1 img{
+    height: 300px;
+    width: 500px;
+    padding: 20PX;
+    border-radius: 40px;
+}
+.title h1{
+    font-size: 3rem;
+    padding: 20px;
+    color: aqua;
+}
+.title p{
+    font-size: 2rem;
+    margin-left: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.title i{
+    font-size: 2rem;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border: .2rem solid var(--main-color);
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.title i:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+    background: rgba(10, 255, 255, 0.149);
+    scale: 1.1;
+}
+#p1{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+#p2{
+    animation: rev linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+#p3{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+#p4{
+    animation: rev linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.contact-details h1{
+    text-align: center;
+    padding: 40px;
+    font-size: 4rem;
+}
+.contact-details form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+}
+.contact-details form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-details form .input-box input,
+.contact-details form textarea {
+    width: 100%;
+    padding: 1.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    background: var(--second-bg-color);
+    color: white;animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.contact-details .btn{
+    text-align: center;
+    margin: .6rem;
+    margin-bottom: 40px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background-color: var(--second-bg-color);
+}
+.footer-text p{
+    font-size: 1.6rem;
+}
+.footer-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+}
+.footer-icon a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.footer-icon a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes rev {
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes scale{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
