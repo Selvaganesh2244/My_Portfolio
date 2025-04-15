@@ -12,7 +12,7 @@
     --bg-color: #1f242d;
     --text-color: #fff;
     --second-bg-color: #323846;
-    --main-color: rgb(0, 221, 255);
+    --main-color: #00ddff;
 }
 html{
     font-size: 62.5%;
@@ -101,6 +101,24 @@ body{
     margin-right: 10px;
     border-radius: 50%;
 }
+.custom-icon1 {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url('img/leetcode.png');
+    scale: 1.6;
+    background-size: cover;
+}  
+.custom-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url('img/hackerank.png');
+    scale: 1.6;
+    background-size: cover;
+}  
 .social-media a:hover{
     scale: 1.2;
     box-shadow: 0 0 1rem var(--main-color);
@@ -289,6 +307,14 @@ span{
     margin-bottom: 20px;
     font-weight: bold;
 }
+.skill-contant-3{
+    background: var(--second-bg-color);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    width: 64rem;
+}
 .skill-contant-2 i{
     font-size: 3rem;
     padding: 20px;
@@ -296,6 +322,19 @@ span{
     border: .2rem solid var(--main-color);
     margin-top: 20px;
     margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.skill-contant-3 i{
+    font-size: 3rem;
+    padding: 20px;
+    width: 100px;
+    border: .2rem solid var(--main-color);
+    margin-top: 20px;
+    margin-left: 25px;
     margin-right: 20px;
     border-radius: 20px;
     animation: appear linear;
@@ -322,12 +361,12 @@ span{
 .skill-contant i span{
     font-size: 13px;
 }
-.skill-contant-1 i:hover, .skill-contant-2 i:hover, .skill-contant-1 .ps-icon:hover{
+.skill-contant-1 i:hover, .skill-contant-2 i:hover, .skill-contant-3 i:hover, .skill-contant-2 .ps-icon:hover, .skill-contant-3 .ex-icon:hover{
     box-shadow: 0 0 1rem var(--main-color);
     scale: 1.1;
 }
 
-.skill-contant-1 .ps-icon{
+.skill-contant-2 .ps-icon{
     margin-left: 2rem;
     padding: 20px;
     border-radius: 20px;
@@ -341,6 +380,19 @@ span{
     width: 30px;
     margin-left: .3rem;
     border-radius: 5px
+}
+.ex-icon{
+    margin-left: 2rem;
+    width: 10rem;
+    padding: 20px;
+    border-radius: 20px;
+    border: .2rem solid var(--main-color);
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.ex-icon img{
+    width: 40px;
 }
 .project-heading{
     font-size: 4rem;
