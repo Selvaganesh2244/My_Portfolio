@@ -360,7 +360,7 @@ span{
 .skill-contant i span{
     font-size: 13px;
 }
-.skill-contant-1 i:hover, .skill-contant-2 i:hover, .skill-contant-3 i:hover, .skill-contant-2 .ps-icon:hover, .skill-contant-3 .ex-icon:hover{
+.skill-contant-1 i:hover,.skill-contant-1 .ex-icon:hover, .skill-contant-2 i:hover, .skill-contant-3 i:hover, .skill-contant-2 .ps-icon:hover, .skill-contant-3 .ex-icon:hover{
     box-shadow: 0 0 1rem var(--main-color);
     scale: 1.1;
 }
@@ -931,3 +931,4 @@ span{
     
 }
     
+
